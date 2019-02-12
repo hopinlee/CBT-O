@@ -12,7 +12,7 @@ library(randomNames)
 ##cbtdata <- read_excel("beths pano data_BF.xlsx")
 ##cbtdata <- cbtdata %>% rename(icdlevel = 'icd level')
 
-# Fake data
+# Fake data 
 cbtdata <- data.frame(reviews = sample(3:20,100, replace=TRUE), 
                       rcts = sample(3:50,100, replace=TRUE), 
                       icdlevel = sample(c("Primary (physical)", "Secondary (psychological)", "Tertiary"), 
@@ -20,7 +20,7 @@ cbtdata <- data.frame(reviews = sample(3:20,100, replace=TRUE),
                       participants = sample(100:600,100, replace=TRUE), 
                       icd = unique(randomNames(n=100))) #random names represent ICD condition in real data
 
-modelTypes <- unique(cbtdata$icdlevel)
+modelTypes <- unique(cbtdata$icdlevel) 
 
 # Define UI for application 
 ui <- fluidPage(
